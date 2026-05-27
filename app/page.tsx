@@ -2,11 +2,10 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
-import { Plus, List, Check, X, SquarePen, Trash, ListCheck, Sigma } from 'lucide-react'
+import { Plus, List, Check, X, Trash, ListCheck, Sigma } from 'lucide-react'
 import { Badge } from "@/components/ui/badge"
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog"
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog"
+import EditTask from "@/components/ui/edit-task"
 
 
 const Home = () => {
@@ -33,22 +32,9 @@ const Home = () => {
               <div className="w-2 h-full bg-green-300"></div>
               <p className="flex-1 px-2 text-sm">Estudar React</p>
               <div className="flex gap-2 items-center">
-                <Dialog>
-                  <DialogTrigger>
-                    <SquarePen size={16} className="cursor-pointer" />
-                  </DialogTrigger>
-                  <DialogContent>
-                    <DialogHeader>
-                      <DialogTitle>Editar Tarefa</DialogTitle>
-                    </DialogHeader>
 
-                    <div className="flex gap-2">
-                      <Input placeholder="Editar tarefa" />
-                      <Button className="cursor-pointer">Editar</Button>
-                    </div>
+                <EditTask />
 
-                  </DialogContent>
-                </Dialog>
                 <Trash size={16} className="cursor-pointer" />
               </div>
             </div>
